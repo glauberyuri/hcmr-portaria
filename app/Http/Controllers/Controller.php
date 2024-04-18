@@ -24,15 +24,15 @@ class Controller extends BaseController
     {
         try {
 
-            $server = "10.168.105.233";
+            $server = "172.17.3.149";
             $db_username = "dbamv";
             $db_password = "odp3j#";
-            $service_name = "mvtreina.hospitalsantamonica.org";
+            $service_name = "mv2000_wd6_gru.snfunmvdb.funvcnmvprod.oraclevcn.com";
             $sid = "ORCL";
             $port = 1521;
             $dbtns = "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = $server)(PORT = $port)) (CONNECT_DATA = (SERVICE_NAME = $service_name) (SID = $sid)))";
 
-//            $this->dbh = new PDO("mysql:host=".$server.";dbname=".dbname, $db_username, $db_password);
+            //$this->dbh = new PDO("mysql:host=".$server.";dbname=".dbname, $db_username, $db_password);
 
             $this->dbh = new PDO("oci:dbname=" . $dbtns . ";charset=utf8", $db_username, $db_password, array(
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
